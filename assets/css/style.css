@@ -1,0 +1,30 @@
+body {
+    background-image: url("../images/santorum.jfif");    
+    background-size: cover;
+}
+
+#container {
+    /* background-image: url("../images/doctor-strange-wallpaper-5.jpg"); */
+    /* background-color: rgb(231, 223, 213); */
+    margin-left: 300px;
+    margin-top: 40px;
+    width: 900px;
+    height: 900px;
+    border: 2px solid grey;
+    text-align: center;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    background-color: #ffffff;
+    color: maroon;
+    width: fit-content;
+    margin-left: 200px;
+    margin-bottom: 150px;
+}
+
+.text {
+    font-size: 28px;
+    color: whitesmoke;
+}
