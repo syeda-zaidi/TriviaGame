@@ -1,11 +1,6 @@
-body {
-    background-image: url("../images/santorum.jfif");    
-    background-size: cover;
-}
+
 
 #container {
-    /* background-image: url("../images/doctor-strange-wallpaper-5.jpg"); */
-    /* background-color: rgb(231, 223, 213); */
     margin-left: 300px;
     margin-top: 40px;
     width: 900px;
@@ -20,11 +15,11 @@ h1 {
     background-color: #ffffff;
     color: maroon;
     width: fit-content;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-bottom: 150px;
 }
 
 .text {
     font-size: 28px;
-    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
 }
