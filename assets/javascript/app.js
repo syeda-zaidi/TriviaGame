@@ -34,17 +34,23 @@ $("#startbtn").on("click", function() {
     startgame();
 });
 
-
-
-
-
 function startgame() {
-    currentQuestion = allQuestions[0].question;
-    $("#display-question").text(currentQuestion);
+for (i = 0; i < allQuestions.length; i++) {
+    currentQuestion = allQuestions[i].question;
 
-    answerOptions = allQuestions[0].options;
-    $("#display-options").html(answerOptions );
+    // $("#display-question").text(currentQuestion);
+
+}
 };
+
+
+// function startgame() {
+//     currentQuestion = allQuestions[0].question;
+//     $("#display-question").text(currentQuestion);
+
+//     answerOptions = allQuestions[0].options;
+//     $("#display-options").html(answerOptions );
+// };
 
 
 });
