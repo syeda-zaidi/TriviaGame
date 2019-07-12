@@ -1,6 +1,7 @@
 $(document).ready(function() {
     
-    var allQuestions = [{
+    var allQuestions = [
+    {
         question: "How many Districts are there in Panem ?",
         options: ["5", "12", "15", "8"],
         correctAnswer: "12",
@@ -23,10 +24,12 @@ $(document).ready(function() {
 ];
 console.log (allQuestions);
 
-var currentQuestion;
+var countDown = 30;
+var currentQuestion = 0;
 var correctAnswer;
 var incorrectAnswer;
 var answerOptions;
+
 
 
 $("#startbtn").on("click", function() {
@@ -35,22 +38,28 @@ $("#startbtn").on("click", function() {
 });
 
 function startgame() {
-for (i = 0; i < allQuestions.length; i++) {
-    currentQuestion = allQuestions[i].question;
 
-    // $("#display-question").text(currentQuestion);
+    $("#display-time").text("Time Remaining : " + countDown);
 
-}
+    var Question = allQuestions[currentQuestion].question;
+    
+    $("#display-question").text(Question);    
+    displayOptions();
 };
 
+function displayOptions() {
+    answerOptions = allQuestions[currentQuestion].options;
+    
+    for (i = 0; i <answerOptions.length; i++) {
+        var choices = $("<div>");
+        choices.attr("data-answer", answerOptions[i]);
+        choices.text(answerOptions[i]);
+        $("#display-options").append(choices);  
+    }
+  
+      
+}
 
-// function startgame() {
-//     currentQuestion = allQuestions[0].question;
-//     $("#display-question").text(currentQuestion);
-
-//     answerOptions = allQuestions[0].options;
-//     $("#display-options").html(answerOptions );
-// };
 
 
 });
