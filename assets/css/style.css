@@ -1,11 +1,11 @@
 body {
-    /* background-image: url("../images/Mockingjay.jpg"); */
+    background-image: url("../images/hsOZcTp.jpg");
     background-size: cover;
 
 }
 
 h1 {
-    /* color: white; */
+    color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 44px;
@@ -15,20 +15,16 @@ h1 {
 .start-button {
     margin-top: 100px;
 }
-/* 
-#triviabox {
-    /* background-color: grey; }*/
 
 #display-time {
     margin-top: 100px;
-    /* color: white;     */
+    color: white;    
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 24px;
 }
 
 #game {
-    /* background: transparent; */
     width: 600px;
     margin-top: 100px;
     margin-left: 250px;
@@ -44,4 +40,13 @@ h1 {
     margin-right: 20px;
     width: 110px;
     
+}
+
+#display-question {
+    color: white;
+    margin-bottom: 30px;
+}
+
+#display-result {
+    color: white;
 }
