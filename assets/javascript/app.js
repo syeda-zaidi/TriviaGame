@@ -3,7 +3,7 @@ $(document).ready(function () {
     var allQuestions = [
         {
             question: "How many Districts are there in Panem ?",
-            options: ["15", "12", "15", "8"],
+            options: ["6", "12", "15", "8"],
             correctAnswer: "12",
         },
         {
