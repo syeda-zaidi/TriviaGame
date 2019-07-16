@@ -3,7 +3,7 @@ $(document).ready(function () {
     var allQuestions = [
         {
             question: "How many Districts are there in Panem ?",
-            options: ["5", "12", "15", "8"],
+            options: ["15", "12", "15", "8"],
             correctAnswer: "12",
         },
         {
@@ -21,10 +21,15 @@ $(document).ready(function () {
             options: ["Farming", "Weapons", "Fishing", "Coal mining"],
             correctAnswer: "Coal mining",
         },
-    ];
-    console.log(allQuestions);
+        {
+            question: "Who is Katniss and Peeta's mentor ?",
+            options: ["Gale Hawthorne", "Effie Trinket", "Haymitch Abernathy", "Finnick Odair"],
+            correctAnswer: "Haymitch Abernathy",
+        },
 
-    var countDown = 5;
+    ];
+
+    var countDown = 15;
     var currentQuestion = 0;
     var correctAnswer = 0;
     var incorrectAnswer = 0;
@@ -41,7 +46,6 @@ $(document).ready(function () {
         if (countDown === 0) {
             clearInterval(timer);
             unanswered++;
-            console.log("unanswered questions " + unanswered);
             nextQuestion();
         }
     }
@@ -55,7 +59,7 @@ $(document).ready(function () {
     // loads the questions and choices 
     function startgame() {
         clearInterval(timer);
-        countDown = 5;
+        countDown = 15;
         timer = setInterval(timerCount, 1000);
 
         $("#display-time").text("Time Remaining : " + countDown);
@@ -83,15 +87,17 @@ $(document).ready(function () {
     $(document).on("click", ".choices", function () {
         var selectedAnswer = $(this).attr("data-answer");
         if (selectedAnswer === allQuestions[currentQuestion].correctAnswer) {
-            alert("correct answer");
+
             correctAnswer++;
-            console.log("correct answers" + correctAnswer);
-            nextQuestion();
+            $(this).attr("class", "choices btn btn-success")
+            clearInterval(timer);
+            setTimeout(nextQuestion, 2000);
         } else {
-            alert("wrong answer");
+
             incorrectAnswer++;
-            console.log("wrong answers " + incorrectAnswer);
-            nextQuestion();
+            $(this).attr("class", "choices btn btn-danger")
+            clearInterval(timer);
+            setTimeout(nextQuestion, 1000);
         }
     });
 
@@ -128,7 +134,6 @@ $(document).ready(function () {
         <button id="resetbtn" class="btn btn-primary"> Reset Game </button>
         `;
         $("#display-result").html(results);
-        console.log("game over");
         $("#display-result").show();
 
     };
